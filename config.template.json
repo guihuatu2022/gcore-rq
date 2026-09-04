@@ -1,0 +1,29 @@
+{
+  "log": {
+    "level": "__LOG_LEVEL__",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "vless",
+      "tag": "vless-in",
+      "listen": "::",
+      "listen_port": __LISTEN_PORT__,
+      "users": [
+        {
+          "uuid": "__UUID__"
+        }
+      ],
+      "transport": {
+        "type": "ws",
+        "path": "__WS_PATH__"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ]
+}
